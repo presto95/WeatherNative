@@ -17,7 +17,7 @@ struct WeatherSecondarySummaryView: View {
         Text(weatherSummary.day.description)
 
         Text("오늘")
-          .font(.caption)
+          .font(.subheadline)
       }
 
       Spacer()
