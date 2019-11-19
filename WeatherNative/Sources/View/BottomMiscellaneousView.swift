@@ -21,8 +21,6 @@ struct BottomMiscellaneousView: View {
 
       Image(systemName: "list.bullet")
     }
-    .padding(.horizontal, 20)
-    .padding(.vertical, 8)
   }
 }
 

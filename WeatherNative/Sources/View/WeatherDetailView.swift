@@ -56,7 +56,6 @@ struct WeatherDetailView: View {
           detailCell(title: "자외선 지수", contents: "\(weatherDetail.ultraviolet)")
         }
       }
-      .padding(.horizontal, 20)
     }
   }
 
@@ -64,11 +63,12 @@ struct WeatherDetailView: View {
     HStack {
       VStack(alignment: .leading) {
         Text(title)
-          .font(.footnote)
-          .foregroundColor(.gray)
+          .font(.caption)
+          .foregroundColor(.secondary)
 
         Text(contents)
           .font(.title)
+          .shadow(radius: 1, y: 1)
       }
 
       Spacer()

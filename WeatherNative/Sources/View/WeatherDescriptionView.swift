@@ -14,7 +14,6 @@ struct WeatherDescriptionView: View {
   var body: some View {
     Text(contents)
       .fixedSize(horizontal: false, vertical: true)
-      .padding(.horizontal, 20)
   }
 }
 

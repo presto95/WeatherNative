@@ -17,25 +17,28 @@ struct WeatherPerDayListView: View {
         self.dayWeatherCell(with: weatherPerDay)
       }
     }
-    .padding(.horizontal, 20)
   }
 
   func dayWeatherCell(with weatherPerDay: WeatherPerDay) -> some View {
     HStack {
-      Text(weatherPerDay.day.description)
+      HStack {
+        Text(weatherPerDay.day.description)
 
-      Spacer()
+        Spacer()
+      }
+      .frame(maxWidth: .infinity)
 
       Image(systemName: weatherPerDay.weather.systemImageName)
 
-      Spacer()
-
       HStack(spacing: 24) {
+        Spacer()
+
         Text("\(weatherPerDay.highestTemperature)")
 
         Text("\(weatherPerDay.lowestTemperature)")
           .foregroundColor(.secondary)
       }
+      .frame(maxWidth: .infinity)
     }
   }
 }
